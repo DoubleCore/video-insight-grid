@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Play, Pause, Volume2, Maximize, SkipBack, SkipForward, Camera } from 'lucide-react';
+import { Play, Pause, Volume2, Maximize, SkipBack, SkipForward, Camera, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 
