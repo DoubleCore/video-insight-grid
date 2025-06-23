@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Play, Pause, Volume2, Maximize, SkipBack, SkipForward } from 'lucide-react';
+import { Play, Pause, Volume2, Maximize, SkipBack, SkipForward, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 
@@ -9,6 +9,11 @@ const VideoPlayer = () => {
   const [volume, setVolume] = useState([80]);
   const [progress, setProgress] = useState([30]);
 
+  const handleScreenshot = () => {
+    console.log('截图功能触发');
+    // 这里可以添加实际的截图逻辑
+  };
+
   return (
     <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
       {/* Video Container */}
@@ -16,10 +21,10 @@ const VideoPlayer = () => {
         {/* Placeholder for video - in real implementation, this would be a video element */}
         <div className="text-center text-gray-400">
           <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center">
-            <Play className="w-12 h-12 text-white ml-1" />
+            <Eye className="w-12 h-12 text-white" />
           </div>
-          <p className="text-lg">游泳技术分析视频</p>
-          <p className="text-sm opacity-75">Swimming Technique Analysis</p>
+          <p className="text-lg">AI行为监控视频</p>
+          <p className="text-sm opacity-75">Behavior Detection Camera</p>
         </div>
         
         {/* Video Overlay */}
@@ -31,6 +36,19 @@ const VideoPlayer = () => {
             onClick={() => setIsPlaying(!isPlaying)}
           >
             {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
+          </Button>
+        </div>
+
+        {/* Screenshot Button */}
+        <div className="absolute top-4 right-4">
+          <Button
+            size="sm"
+            variant="secondary"
+            className="bg-red-600 hover:bg-red-700 text-white"
+            onClick={handleScreenshot}
+          >
+            <Camera className="w-4 h-4 mr-2" />
+            截图
           </Button>
         </div>
       </div>

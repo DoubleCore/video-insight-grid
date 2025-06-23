@@ -9,8 +9,8 @@ const Index = () => {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="px-6 py-4">
-          <h1 className="text-2xl font-bold text-gray-900">游泳技术分析平台</h1>
-          <p className="text-gray-600 mt-1">Swimming Technique Analysis Platform</p>
+          <h1 className="text-2xl font-bold text-gray-900">AI谈话间异常行为检测系统</h1>
+          <p className="text-gray-600 mt-1">AI Conversation Room Abnormal Behavior Detection System</p>
         </div>
       </header>
 
